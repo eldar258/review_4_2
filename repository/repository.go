@@ -9,7 +9,7 @@ type Repositorer interface {
 	Create(name, state string) (int, error)
 	Delete(id int) error
 	Update(id int, name, state string) error
-	List() ([]*model.Cities, error)
+	List() ([]*model.City, error)
 }
 
 type Repository struct {
@@ -32,6 +32,6 @@ func (r *Repository) Update(id int, name, state string) error {
 	return r.db.Update(id, name, state)
 }
 
-func (r *Repository) List() ([]*model.Cities, error) {
+func (r *Repository) List() ([]*model.City, error) {
 	return r.db.List()
 }
