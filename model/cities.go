@@ -1,7 +1,7 @@
 package model
 
-type Cities struct {
-	id    int
-	name  string
-	state string
+type City struct {
+	Id    int
+	Name  string
+	State string
 }
