@@ -6,5 +6,5 @@ import (
 )
 
 func Connect() (*sqlx.DB, error) {
-	return sqlx.Connect("mysql", "test:test@(localhost:3306)/test")
+	return sqlx.Connect("mysql", "root:my-secret-pw@(localhost:3306)/test")
 }
